@@ -1,0 +1,36 @@
+{
+  "version": "0.0.1",
+  "name": "markdawn",
+  "author": "Giacomo Tagliabue <giacomo.tag@gmail.com>",
+  "homepage": "https://github.com/itajaja/markdawn",
+  "description": "(multi)markdown for paged documents. Outputs to pdf",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:itajaja/markdawn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itajaja/markdawn/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/itajaja/markdawn/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "gruntplugin",
+    "multimarkdown",
+    "markdown",
+    "pdf",
+    "document"
+  ]
+}
