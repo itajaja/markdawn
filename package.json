@@ -21,10 +21,14 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "remarkable": "^1.6.0"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-watch": "^4.2.4"
   },
   "keywords": [
     "gruntplugin",
