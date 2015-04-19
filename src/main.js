@@ -1,5 +1,15 @@
-var Remarkable = require('remarkable');
-var md = new Remarkable();
+var fs = require('fs');
+var program = require('commander');
 
-console.log(md.render('# Remarkable rulezz!'));
-// => <h1>Remarkable rulezz!</h1>
+var markdawn = require('./core').markdawn;
+
+// create the program object to parse options
+program
+  .usage('[options] <file>')
+  .parse(process.argv);
+
+// parse the input
+var inputFile = program.args[0] || 'input.md';
+var inputText = fs.readFileSync(inputFile, 'utf8');
+
+console.log(markdawn.generate(inputText));

@@ -21,6 +21,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "commander": "^2.8.0",
     "remarkable": "^1.6.0"
   },
   "peerDependencies": {},
