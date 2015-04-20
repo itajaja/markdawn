@@ -1,12 +1,8 @@
----
-__Advertisement :)__
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis nibh quis condimentum luctus. Etiam lacus eros, dignissim quis erat sit amet, ultricies convallis eros. Aenean volutpat aliquet nisi, id congue ligula aliquam a. Curabitur feugiat nibh eu condimentum malesuada. Maecenas arcu nulla, [This is a link](http://google.com) lacinia in lectus at, placerat vulputate massa. Donec mollis tortor non quam consectetur, at pharetra tellus pellentesque. Curabitur maximus, massa et finibus pharetra, risus ante placerat ipsum, nec fringilla massa lectus scelerisque lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet felis facilisis condimentum et vel ex. Duis interdum dui at velit auctor, nec aliquet nibh laoreet. Praesent nec tincidunt orci.
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
+Donec accumsan quis felis a cursus. Fusce est eros, mollis id ultrices id, elementum eget est. Aliquam sollicitudin consequat consectetur. Nullam ultricies elit vitae sapien laoreet, et hendrerit dolor pulvinar. Nam dignissim velit erat, vel viverra nulla faucibus id. Sed eu mattis turpis. Aliquam magna est, consequat sed dui at, lobortis finibus nulla. Maecenas lorem nibh, faucibus nec tempor id, rhoncus sed nibh. Cras non mauris vitae ante auctor eleifend vel at erat.
 
-You will like those projects!
+Aliquam condimentum auctor nibh et eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec venenatis iaculis nunc vitae maximus. Sed bibendum pretium magna at hendrerit. Vivamus eu nibh lobortis, elementum risus quis, gravida nisi. Nullam a hendrerit mauris. Proin fermentum diam nisl, suscipit euismod nunc semper non. Integer eu turpis ut leo consectetur euismod ac quis eros. Maecenas augue leo, cursus ut sem a, maximus finibus ipsum. Morbi ligula mauris, tempus in quam sed, congue placerat lacus. Vivamus congue urna massa, id facilisis augue fermentum nec. Cras vel pulvinar diam, ac euismod ipsum. In feugiat ante mattis, molestie mauris non, tincidunt diam. Phasellus faucibus leo vel nisi auctor mollis. In ac arcu mollis, bibendum dui eu, pharetra dui.
 
 ---
 

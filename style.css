@@ -11,9 +11,9 @@ body .markdown-body
 }
 
 .markdown-body {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-align: justify;
   color: #333333;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;

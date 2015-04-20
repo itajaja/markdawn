@@ -5,7 +5,10 @@ var fs = require('fs');
 
 var md = new Remarkable({
   linkify: false,
-  typographer:  true,
+  typographer: true,
+  html: true,
+  quotes: '“”‘’',
+  _strict: false,
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
