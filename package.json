@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "commander": "^2.8.0",
+    "highlight.js": "^8.5.0",
     "html-pdf": "^1.1.0",
     "remarkable": "^1.6.0"
   },

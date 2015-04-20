@@ -1,5 +1,5 @@
 # markdawn
-(multi)markdown for paged documents. Outputs to pdf
+markdown for paged documents. Outputs to pdf
 
 ## Usage
 
