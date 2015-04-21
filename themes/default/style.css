@@ -1,4 +1,4 @@
-.markdown-body {
+body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-align: justify;
@@ -8,6 +8,15 @@
   font-size: 11pt;
   line-height: 1.6;
   word-wrap: break-word;
+}
+
+.title-page{
+  font-family: "Calibri Light";
+  padding-top: 3in;
+  line-height: normal;
+  font-size: 43pt;
+  page-break-after: always;
+  text-align: right;
 }
 
 .markdown-body a {
@@ -364,6 +373,7 @@
   font-size: 2.25em;
   line-height: 1.2;
   border-bottom: 1px solid #eee;
+  page-break-before: always;
 }
 
 .markdown-body h2 {

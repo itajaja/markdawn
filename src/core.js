@@ -44,6 +44,32 @@ function generateIndex(index, indexPath) {
 ${indexText}`;
 }
 
+// parse the multimarkdown-style metadata
+function parseMetadata(text) {
+  let lines = text.split('\n');
+  let metadata = {};
+
+  for (var i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    if (!line || line.indexOf(':') === -1) {
+      break;
+    }
+    let index = line.indexOf(':');
+    let key = line.substr(0, index);
+    let val = line.substr(index + 1);
+    metadata[key] = val;
+  }
+
+  metadata.$count = i;
+  return metadata;
+}
+
+function stripMetadata(text, count) {
+  let lines = text.split('\n');
+  lines.splice(0, count);
+  return lines.join('\n');
+}
+
 module.exports.markdawn = {
 
   /**
@@ -67,6 +93,11 @@ module.exports.markdawn = {
 
     let indexPath = path.dirname(path.resolve(index));
     let indexText = generateIndex(index, indexPath);
+
+    // process metedata
+    let metadata = parseMetadata(text);
+    text = stripMetadata(text, metadata.$count);
+    indexText = utils.interpolate(indexText, metadata);
 
     let html = utils.interpolate(indexText, {
       content: md.render(text)

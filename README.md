@@ -19,3 +19,6 @@ you can call markdawn from command line to generate a pdf using the remarkable g
 - [ ] pdf options
 - [ ] theme selector
 - [ ] add eslint to gulp
+- [ ] @page media type
+- [ ] math function
+- [ ] fix link and references
