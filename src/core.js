@@ -37,10 +37,11 @@ let md = new Remarkable({
   }
 });
 
-function generateIndex(index) {
+function generateIndex(index, indexPath) {
   let indexText = fs.readFileSync(index, 'utf8');
-  return `<base href="${path.resolve(index)}" target="_blank, _self, _parent, _top">
-    ${indexText}`;
+  return `<!DOCTYPE html>
+<base href="${indexPath}/" target="_blank, _self, _parent, _top">
+${indexText}`;
 }
 
 module.exports.markdawn = {
@@ -64,16 +65,15 @@ module.exports.markdawn = {
       index = config.defaultTheme;
     }
 
-    let indexText = generateIndex(index);
+    let indexPath = path.dirname(path.resolve(index));
+    let indexText = generateIndex(index, indexPath);
 
     let html = utils.interpolate(indexText, {
       content: md.render(text)
     });
 
-    let pdfOptions = {
-      filename: `./${out}`,
-      format: 'Letter'
-    };
+    let pdfOptions = require(path.resolve(indexPath, 'page.json'));
+    pdfOptions.filename = `./${out}`;
 
     pdf.create(html, pdfOptions).toFile(function(err) {
       if (err) {

@@ -1,23 +1,11 @@
-body {
-  width: 45em;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
-  margin: 16px auto;
-}
-
-body .markdown-body
-{
-  padding: 30px;
-}
-
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-align: justify;
   color: #333333;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
+  font-family: "Calibri", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 11pt;
   line-height: 1.6;
   word-wrap: break-word;
 }
@@ -220,30 +208,33 @@ body .markdown-body
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.1;
+  font-family: "Calibri Light";
+  color: rgb(83, 129, 53);
+  font-weight: 100;
 }
 
 .markdown-body h1 {
-  font-size: 30px;
+  font-size: 18pt;
 }
 
 .markdown-body h2 {
-  font-size: 21px;
+  font-size: 16pt;
 }
 
 .markdown-body h3 {
-  font-size: 16px;
+  font-size: 14pt;
 }
 
 .markdown-body h4 {
-  font-size: 14px;
+  font-size: 13pt;
 }
 
 .markdown-body h5 {
-  font-size: 12px;
+  font-size: 12pt;
 }
 
 .markdown-body h6 {
-  font-size: 11px;
+  font-size: 11pt;
 }
 
 .markdown-body blockquote {
@@ -332,7 +323,6 @@ body .markdown-body
   position: relative;
   margin-top: 1em;
   margin-bottom: 16px;
-  font-weight: bold;
   line-height: 1.4;
 }
 
@@ -414,7 +404,7 @@ body .markdown-body
 }
 
 .markdown-body hr {
-  height: 4px;
+  height: 2px;
   padding: 0;
   margin: 16px 0;
   background-color: #e7e7e7;

@@ -1,0 +1,17 @@
+{
+  "format": "Letter",
+  "border": {
+    "top": "0in",
+    "right": "1in",
+    "bottom": "0in",
+    "left": "1in"
+  },
+  "header": {
+    "height": "1in",
+    "contents": "HEADER HEADER HEADER"
+  },
+  "footer": {
+    "height": "1in",
+    "contents": "{{page}}/{{pages}}"
+  }
+}
