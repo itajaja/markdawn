@@ -1,17 +1,17 @@
+# Lorem
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis nibh quis condimentum luctus. Etiam lacus eros, dignissim quis erat sit amet, ultricies convallis eros. Aenean volutpat aliquet nisi, id congue ligula aliquam a. Curabitur feugiat nibh eu condimentum malesuada. Maecenas arcu nulla, [This is a link](http://google.com) lacinia in lectus at, placerat vulputate massa. Donec mollis tortor non quam consectetur, at pharetra tellus pellentesque. Curabitur maximus, massa et finibus pharetra, risus ante placerat ipsum, nec fringilla massa lectus scelerisque lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet felis facilisis condimentum et vel ex. Duis interdum dui at velit auctor, nec aliquet nibh laoreet. Praesent nec tincidunt orci.
 
 Donec accumsan quis felis a cursus. Fusce est eros, mollis id ultrices id, elementum eget est. Aliquam sollicitudin consequat consectetur. Nullam ultricies elit vitae sapien laoreet, et hendrerit dolor pulvinar. Nam dignissim velit erat, vel viverra nulla faucibus id. Sed eu mattis turpis. Aliquam magna est, consequat sed dui at, lobortis finibus nulla. Maecenas lorem nibh, faucibus nec tempor id, rhoncus sed nibh. Cras non mauris vitae ante auctor eleifend vel at erat.
 
 Aliquam condimentum auctor nibh et eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec venenatis iaculis nunc vitae maximus. Sed bibendum pretium magna at hendrerit. Vivamus eu nibh lobortis, elementum risus quis, gravida nisi. Nullam a hendrerit mauris. Proin fermentum diam nisl, suscipit euismod nunc semper non. Integer eu turpis ut leo consectetur euismod ac quis eros. Maecenas augue leo, cursus ut sem a, maximus finibus ipsum. Morbi ligula mauris, tempus in quam sed, congue placerat lacus. Vivamus congue urna massa, id facilisis augue fermentum nec. Cras vel pulvinar diam, ac euismod ipsum. In feugiat ante mattis, molestie mauris non, tincidunt diam. Phasellus faucibus leo vel nisi auctor mollis. In ac arcu mollis, bibendum dui eu, pharetra dui.
 
----
-
-# h1 Heading
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+# h1 Section
+## h2 Section
+### h3 Section
+#### h4 Section
+##### h5 Section
+###### h6 Section
 
 
 ## Horizontal Rules
@@ -23,7 +23,7 @@ ___
 ***
 
 
-## Typographic replacements
+# Typographic replacements
 
 Enable typographer option to see result.
 
@@ -40,7 +40,7 @@ Remarkable -- awesome
 'Smartypants, single quotes'
 
 
-## Emphasis
+# Emphasis
 
 **This is bold text**
 
@@ -61,7 +61,7 @@ Subscript: H~2~O
 ==Marked text==
 
 
-## Blockquotes
+# Blockquotes
 
 
 > Blockquotes can also be nested...
@@ -69,7 +69,7 @@ Subscript: H~2~O
 > > > ...or with spaces between arrows.
 
 
-## Lists
+# Lists
 
 Unordered
 
@@ -97,7 +97,7 @@ Start numbering with offset:
 1. bar
 
 
-## Code
+# Code
 
 Inline `code`
 
@@ -125,7 +125,7 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-## Tables
+# Tables
 
 | Option | Description |
 | ------ | ----------- |
@@ -142,7 +142,7 @@ Right aligned columns
 | ext    | extension to be used for dest files. |
 
 
-## Links
+# Links
 
 [link text](http://dev.nodeca.com)
 
@@ -151,7 +151,7 @@ Right aligned columns
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
-## Images
+# Images
 
 ![Minion](https://octodex.github.com/images/minion.png)
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
@@ -165,7 +165,7 @@ With a reference later in the document defining the URL location:
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
 
-## Footnotes
+# Footnotes
 
 Footnote 1 link[^first].
 
@@ -182,7 +182,7 @@ Duplicated footnote reference[^second].
 [^second]: Footnote text.
 
 
-## Definition lists
+# Definition lists
 
 Term 1
 
@@ -207,7 +207,7 @@ Term 2
   ~ Definition 2b
 
 
-## Abbreviations
+# Abbreviations
 
 This is HTML abbreviation example.
 
