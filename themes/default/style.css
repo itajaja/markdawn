@@ -3,20 +3,34 @@ body {
   -webkit-text-size-adjust: 100%;
   text-align: justify;
   color: #333333;
-  overflow: hidden;
   font-family: "Calibri", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 11pt;
   line-height: 1.6;
   word-wrap: break-word;
 }
 
-.title-page{
+.title-page {
   font-family: "Calibri Light";
   padding-top: 3in;
   line-height: normal;
   font-size: 43pt;
   page-break-after: always;
   text-align: right;
+}
+
+.toc {
+  page-break-after: always;
+}
+
+.toc ul {
+  font-size: 14pt;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.toc ul a {
+  color: #333333;
+  text-decoration: initial;
 }
 
 .markdown-body a {
@@ -213,7 +227,8 @@ body {
 .markdown-body h3,
 .markdown-body h4,
 .markdown-body h5,
-.markdown-body h6 {
+.markdown-body h6,
+.toc .toc-title {
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.1;

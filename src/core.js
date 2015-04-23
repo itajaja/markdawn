@@ -3,6 +3,7 @@ let pdf = require('html-pdf');
 let hljs = require('highlight.js');
 let fs = require('fs');
 let path = require('path');
+let toc = require('markdown-toc');
 
 let config = require('./config');
 let utils = require('./utils');
@@ -70,6 +71,13 @@ function stripMetadata(text, count) {
   return lines.join('\n');
 }
 
+function addToc(text, html) {
+  let tocObj = {
+    TOC: md.render(toc(text).content)
+  };
+  return utils.interpolate(html, tocObj);
+}
+
 module.exports.markdawn = {
 
   /**
@@ -92,14 +100,18 @@ module.exports.markdawn = {
     }
 
     let indexPath = path.dirname(path.resolve(index));
-    let indexText = generateIndex(index, indexPath);
+    let html = generateIndex(index, indexPath);
 
     // process metedata
     let metadata = parseMetadata(text);
     text = stripMetadata(text, metadata.$count);
-    indexText = utils.interpolate(indexText, metadata);
+    html = utils.interpolate(html, metadata);
 
-    let html = utils.interpolate(indexText, {
+    // add TOC
+    html = addToc(text, html);
+
+    // insert markdown into index html
+    html = utils.interpolate(html, {
       content: md.render(text)
     });
 
@@ -108,7 +120,7 @@ module.exports.markdawn = {
 
     pdf.create(html, pdfOptions).toFile(function(err) {
       if (err) {
-        return console.log(err);
+        return console.error(err);
       }
     });
 
