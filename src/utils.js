@@ -6,7 +6,8 @@ module.exports = {
   interpolate: (input, object) => {
     for (var key in object) {
       if (object.hasOwnProperty(key)) {
-        input = input.replace(`{{${key}}}`, object[key]);
+        var exp = new RegExp(`{{${key}}}`, 'g');
+        input = input.replace(exp, object[key]);
       }
     }
     return input;
