@@ -106,7 +106,7 @@ module.exports.markdawn = {
 
     // validate that the index file exists
     if (!index || !fs.existsSync(index)) {
-      console.warn(`the index file provided (${index}) doesn't exist. Markdawn will use the default theme`);
+      console.warn(`Warning: the index file provided (${index}) doesn't exist. Markdawn will use the default theme`);
       index = config.defaultTheme;
     }
 
@@ -126,7 +126,14 @@ module.exports.markdawn = {
       content: md.render(text)
     });
 
-    let pdfOptions = require(path.resolve(indexPath, 'page.json'));
+
+    let pdfOptions = {};
+    try {
+      pdfOptions = require(path.resolve(indexPath, 'page.json'));
+    }catch(e) {
+      console.warn(`Warning: missing file page.json in the index folder (${index}). Using default page settings`);
+    }
+
     if (opts.format) {
       // overwrite the format
       pdfOptions.format = opts.format;
