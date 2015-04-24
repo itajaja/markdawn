@@ -17,7 +17,7 @@
 
   // sanitize input
   if (program.theme && program.index) {
-    console.error('\nYou cannot specify an index file and a theme at the same time');
+    console.error('\nYou cannot specify an index file and a theme at the same time\n');
     return -1;
   }
 
@@ -26,6 +26,7 @@
     markdawn.getThemes().forEach((theme) => {
       console.log(`    ${theme}`);
     });
+    console.log(); // empty line
     // returns 0 if you are showing the themes, else -1 in the case there was an error selecting themes
     return program.themes ? 0 : -1;
   }
@@ -48,6 +49,3 @@
   // TODO remember to remove the write of the html (only for debugging purposes)
   fs.writeFileSync('out.html', markdawn.generate(input, opts));
 }());
-
-// write an empty string at the end
-console.log();
