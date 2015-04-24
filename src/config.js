@@ -1,7 +1,10 @@
 let path = require('path');
 
+let themePath = '../themes/';
+
 let config = {
-  defaultTheme: path.resolve(__dirname, '../themes/default/index.html')
+  themePath: path.resolve(__dirname, themePath),
+  defaultTheme: path.resolve(__dirname, themePath, 'default/index.html')
 };
 
 /**

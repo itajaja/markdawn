@@ -83,18 +83,29 @@ module.exports.markdawn = {
   /**
    * generate the pdf document with the following input
    * @param text the markdwon text to insert in the docuement
-   * @param out the path to the output file
-   * @param index the path to the `index.html` file
+   * @param opts object containing configuration keys for generating the pdf
+   *   - index: path to the index.html file that defines a theme
+   *   - format: (e.g. "Letter", "A4") overrides the format specified in the theme
+   *   - out: name of output file
+   *   - theme: name of a preconfigured theme to use (this property has priority over the `index` property)
    * @return the html that generates the pdf, useful for debugging purposes
    */
-  generate: (text, out, index) => {
+  generate: (text, opts) => {
 
     // sanitize input
     if (!text) {
       console.warn('the input text is empty');
     }
-    out = out || 'out.pdf';
-    if (!index || fs.existsSync(index)) {
+    let out = opts.out || 'out.pdf';
+
+    let index = opts.index;
+    if (opts.theme) {
+      // select the theme
+      index = path.resolve(config.themePath, opts.theme, 'index.html');
+    }
+
+    // validate that the index file exists
+    if (!index || !fs.existsSync(index)) {
       console.warn(`the index file provided (${index}) doesn't exist. Markdawn will use the default theme`);
       index = config.defaultTheme;
     }
@@ -116,6 +127,10 @@ module.exports.markdawn = {
     });
 
     let pdfOptions = require(path.resolve(indexPath, 'page.json'));
+    if (opts.format) {
+      // overwrite the format
+      pdfOptions.format = opts.format;
+    }
     pdfOptions.filename = `./${out}`;
 
     pdf.create(html, pdfOptions).toFile(function(err) {
@@ -125,5 +140,13 @@ module.exports.markdawn = {
     });
 
     return html;
+  },
+
+  /**
+   * get the list of preconfigured thems that can be used
+   * @return a list of strings, each string representing a name of a theme
+   */
+  getThemes: () => {
+    return fs.readdirSync(config.themePath);
   }
 };
