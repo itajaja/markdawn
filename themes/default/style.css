@@ -4,8 +4,8 @@ body {
   text-align: justify;
   color: #333333;
   font-family: "Calibri", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 11pt;
-  line-height: 1.6;
+  font-size: 14pt;
+  line-height: 1.4;
   word-wrap: break-word;
 }
 
@@ -18,8 +18,28 @@ body {
   text-align: right;
 }
 
+#pageHeader,
+#pageFooter {
+  font-size: 14pt;
+  margin: 0.3em;
+}
+
+#pageHeader p,
+#pageFooter p {
+  margin: 0.3em;
+}
+
+#pageHeader {
+  text-align: right;
+}
+
+#pageFooter {
+  text-align: center;
+}
+
 .toc {
   page-break-after: always;
+  line-height: 1.6;
 }
 
 .toc ul {
@@ -337,24 +357,24 @@ body {
 }
 
 .markdown-body h1 {
-  font-size: 2.25em;
+  font-size: 2em;
   line-height: 1.2;
   border-bottom: 1px solid #eee;
   page-break-before: always;
 }
 
 .markdown-body h2 {
-  font-size: 1.75em;
+  font-size: 1.5em;
   line-height: 1.225;
 }
 
 .markdown-body h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.43;
 }
 
 .markdown-body h4 {
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 
 .markdown-body h5 {
