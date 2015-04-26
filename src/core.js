@@ -4,6 +4,7 @@ let hljs = require('highlight.js');
 let fs = require('fs');
 let path = require('path');
 let toc = require('markdown-toc');
+let cheerio = require('cheerio');
 
 let config = require('./config');
 let utils = require('./utils');
@@ -38,10 +39,9 @@ let md = new Remarkable({
   }
 });
 
-function generateIndex(index, indexPath) {
+function generateIndex(index) {
   let indexText = fs.readFileSync(index, 'utf8');
   return `<!DOCTYPE html>
-<base href="${indexPath}/" target="_blank, _self, _parent, _top">
 ${indexText}`;
 }
 
@@ -78,6 +78,27 @@ function addToc(text, html) {
   return utils.interpolate(html, tocObj);
 }
 
+function generateCss(html, indexPath) {
+  let $ = cheerio.load(html);
+  // collect all the links that end with .css that are found in the style folder
+  $('link')
+    .toArray()
+    .map(link => {
+      return path.resolve(indexPath, link.attribs.href);
+    })
+    .filter(link => {
+      return link.match('.css$')[0] === '.css' && fs.existsSync(link);
+    })
+    .map(link => {
+      var style = fs.readFileSync(link, 'utf8');
+      return `<style type="text/css">${style}</style>`;
+    })
+    .forEach(style => {
+      $('head').append(style);
+    });
+  return $.html();
+}
+
 module.exports.markdawn = {
 
   /**
@@ -111,12 +132,15 @@ module.exports.markdawn = {
     }
 
     let indexPath = path.dirname(path.resolve(index));
-    let html = generateIndex(index, indexPath);
+    let html = generateIndex(index);
 
     // process metedata
     let metadata = parseMetadata(text);
     text = stripMetadata(text, metadata.$count);
     html = utils.interpolate(html, metadata);
+
+    // unwrap css
+    html = generateCss(html, indexPath);
 
     // add TOC
     html = addToc(text, html);
@@ -125,7 +149,6 @@ module.exports.markdawn = {
     html = utils.interpolate(html, {
       content: md.render(text)
     });
-
 
     let pdfOptions = {};
     try {
