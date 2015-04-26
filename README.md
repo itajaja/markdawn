@@ -9,15 +9,15 @@ you can call markdawn from command line to generate a pdf using the remarkable g
 
 - [x] a folder that contains all the static elements. (defaults to running folder?)
 - [x] title page
-- [ ] breakpoints
-- [ ] header + footer
+- [ ] breakpages
+- [x] header + footer
 - [x] margins (maybe inside metadata?)
 - [x] metadata (title, author, whatever... multimarkdown style)
 - [ ] fonts?
 - [ ] themed sections
 - [ ] multi column (hardly doable :/)
 - [x] pdf options
-- [ ] theme selector
+- [x] theme selector
 - [ ] add eslint to gulp
 - [ ] @page media type
 - [ ] math function
