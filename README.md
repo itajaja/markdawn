@@ -13,7 +13,6 @@ you can call markdawn from command line to generate a pdf using the remarkable g
 - [x] header + footer
 - [x] margins (maybe inside metadata?)
 - [x] metadata (title, author, whatever... multimarkdown style)
-- [ ] fonts?
 - [ ] themed sections
 - [ ] multi column (hardly doable :/)
 - [x] pdf options
