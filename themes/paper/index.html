@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link href="solarized_light.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+@font-face {
+  font-family: "Computer Modern";
+  src: url('cmunrm.svg#cmunrm');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('cmunbx.svg#cmunbx');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('cmunti.svg#cmunti');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('cmunbi.svg#cmunbi');
+  font-weight: bold;
+  font-style: italic;
+}
+    </style>
+  </head>
+  <body>
+    <div class="title-page">
+      <div>{{Title}}</div>
+      <div>{{Author}}</div>
+      <div>{{Department}}</div>
+      <div>{{University}}</div>
+      <div>{{Address}}</div>
+      <div>{{Date}}</div>
+    </div>
+    <div class="toc">
+      <h1 class="toc-title">Contents</h2>
+      {{TOC}}
+    </div>
+    <article class="markdown-body">
+      {{content}}
+    </article>
+    <!-- <div id="pageHeader">
+      <p>{{Title}}</p>
+      <p>{{Subtitle}} - Version {{Version}}</p>
+    </div>
+    <div id="pageFooter">
+      <p>{{page}} of {{pages}}</p>
+    </div> -->
+  </body>
+</html>
