@@ -9,7 +9,7 @@ let cheerio = require('cheerio');
 let config = require('./config');
 let utils = require('./utils');
 
-let md = new Remarkable({
+let md = new Remarkable('full', {
   linkify: false,
   typographer: true,
   html: true,
