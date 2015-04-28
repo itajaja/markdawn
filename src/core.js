@@ -39,10 +39,9 @@ let md = new Remarkable('full', {
   }
 });
 
-function generateIndex(index, indexPath) {
+function generateIndex(index) {
   let indexText = fs.readFileSync(index, 'utf8');
   return `<!DOCTYPE html>
-<base href="${indexPath}/" target="_blank, _self, _parent, _top">
 ${indexText}`;
 }
 
@@ -79,6 +78,21 @@ function addToc(text, html) {
   return utils.interpolate(html, tocObj);
 }
 
+function absoultePaths(html, indexPath) {
+  let $ = cheerio.load(html);
+  let refs = $('*[href]')
+    // .toArray()
+    .filter(function(key, val) {
+      // test that the href value is indeed a local resource
+      let match = !(/^http:\/\/|^https:\/\/|^#/).test(val.attribs.href)
+      return match;
+    })
+    .attr('href', function(){
+      return path.resolve(indexPath, this.attribs.href);
+    });
+    return $.html();
+}
+
 module.exports.markdawn = {
 
   /**
@@ -112,7 +126,7 @@ module.exports.markdawn = {
     }
 
     let indexPath = path.dirname(path.resolve(index));
-    let html = generateIndex(index, indexPath);
+    let html = generateIndex(index);
 
     // process metedata
     let metadata = parseMetadata(text);
@@ -126,6 +140,8 @@ module.exports.markdawn = {
     html = utils.interpolate(html, {
       content: md.render(text)
     });
+
+    html = absoultePaths(html, indexPath);
 
     let pdfOptions = {};
     try {
