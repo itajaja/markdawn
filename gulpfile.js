@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   babel = require('gulp-babel'),
   watch = require('gulp-watch'),
   plumber = require('gulp-plumber'),
+  clean = require('gulp-clean'),
 
   path = {
     src: {
@@ -14,6 +15,11 @@ var gulp = require('gulp'),
     }
   };
 
+gulp.task('clean', function () {
+  return gulp.src(path.dist.js, {read: false})
+      .pipe(clean());
+});
+
 gulp.task('6to5', function() {
   gulp.src(path.src.js)
     .pipe(plumber())
@@ -22,9 +28,9 @@ gulp.task('6to5', function() {
     .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('watch', ['6to5'], function() {
+gulp.task('watch', ['clean','6to5'], function() {
   gulp.watch([path.src.js], ['6to5']);
 });
 
 gulp.task('default', ['watch']);
-gulp.task('build', ['6to5']);
+gulp.task('build', ['clean', '6to5']);

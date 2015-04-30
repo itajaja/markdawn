@@ -34,12 +34,14 @@
   },
   "scripts": {
     "build": "gulp build",
-    "test": "gulp build"
+    "test": "gulp build",
+    "prepublish": "gulp build"
   },
   "peerDependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
+    "gulp-clean": "^0.3.1",
     "gulp-plumber": "^1.0.0",
     "gulp-watch": "^4.2.4"
   },
