@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "markdawn",
   "author": "Giacomo Tagliabue <giacomo.tag@gmail.com>",
   "homepage": "https://github.com/itajaja/markdawn",
@@ -19,7 +19,7 @@
   ],
   "main": "lib/core",
   "bin": {
-    "markdawn" : "lib/cli.js"
+    "markdawn": "lib/cli.js"
   },
   "engines": {
     "node": ">= 0.8.0"
