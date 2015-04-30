@@ -10,7 +10,7 @@ var gulp = require('gulp'),
       js: 'src/*.js'
     },
     dist: {
-      js: "dist/"
+      js: "lib/"
     }
   };
 

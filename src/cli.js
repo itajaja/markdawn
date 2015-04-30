@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 (function () {
   let fs = require('fs');
   let program = require('commander');
