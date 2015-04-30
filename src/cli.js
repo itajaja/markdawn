@@ -4,12 +4,13 @@
   let fs = require('fs');
   let program = require('commander');
 
-  let markdawn = require('./core').markdawn;
+  let markdawn = require('./core');
   let utils = require('./utils');
 
   // create the program object to parse options
   program
     .usage('[options] <file>')
+    .option('-v, --version', 'print markdawn\'s version')
     .option('-o, --out <out>', 'name of output file')
     .option('-t, --theme <theme>', 'name of a preconfigured theme to use')
     .option('-i, --index <index.html>', 'path to the index.html file that defines a theme')
