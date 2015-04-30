@@ -22,7 +22,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('6to5', function() {
-  gulp.src(path.src.js)
+  return gulp.src(path.src.js)
     .pipe(plumber())
     .pipe(babel())
     .pipe(plumber.stop())
