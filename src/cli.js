@@ -10,12 +10,12 @@
   // create the program object to parse options
   program
     .usage('[options] <file>')
-    .option('-v, --version', 'print markdawn\'s version')
+    .version(require('../package.json').version)
     .option('-o, --out <out>', 'name of output file')
     .option('-t, --theme <theme>', 'name of a preconfigured theme to use')
     .option('-i, --index <index.html>', 'path to the index.html file that defines a theme')
     .option('-f, --format <format>', '(e.g. "Letter", "A4") overrides the format specified in the theme')
-    .option('--themes', 'Shows the list of preconfigured themes')
+    .option('--themes', 'shows the list of preconfigured themes')
     .parse(process.argv);
 
   // sanitize input
