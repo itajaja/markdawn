@@ -4,7 +4,6 @@ let hljs = require('highlight.js');
 let fs = require('fs');
 let path = require('path');
 let toc = require('markdown-toc');
-let cheerio = require('cheerio');
 
 let config = require('./config');
 let utils = require('./utils');
@@ -78,19 +77,10 @@ function addToc(text, html) {
   return utils.interpolate(html, tocObj);
 }
 
-function absoultePaths(html, indexPath) {
-  let $ = cheerio.load(html);
-  let refs = $('*[href]')
-    // .toArray()
-    .filter(function(key, val) {
-      // test that the href value is indeed a local resource
-      let match = !(/^http:\/\/|^https:\/\/|^#/).test(val.attribs.href)
-      return match;
-    })
-    .attr('href', function(){
-      return path.resolve(indexPath, this.attribs.href);
-    });
-    return $.html();
+function absolutePaths(html, indexPath) {
+  html = utils.rebaseAttribute(html, indexPath, 'href');
+  html = utils.rebaseAttribute(html, indexPath, 'src');
+  return html;
 }
 
 module.exports = {
@@ -103,6 +93,7 @@ module.exports = {
    *   - format: (e.g. "Letter", "A4") overrides the format specified in the theme
    *   - out: name of output file
    *   - theme: name of a preconfigured theme to use (this property has priority over the `index` property)
+   *   - contentDir: content directory to take the content source from
    * @return the html that generates the pdf, useful for debugging purposes
    */
   generate: (text, opts) => {
@@ -137,12 +128,17 @@ module.exports = {
     // add TOC
     html = addToc(text, html);
 
+    html = absolutePaths(html, indexPath);
+
+    let markdown = md.render(text);
+    markdown = absolutePaths(markdown, opts.contentDir);
+
     // insert markdown into index html
     html = utils.interpolate(html, {
-      content: md.render(text)
+      content: markdown
     });
 
-    html = absoultePaths(html, indexPath);
+
 
     let pdfOptions = {};
     try {

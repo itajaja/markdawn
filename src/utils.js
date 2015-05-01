@@ -1,3 +1,6 @@
+let cheerio = require('cheerio');
+let path = require('path');
+
 module.exports = {
 
   /**
@@ -25,5 +28,23 @@ module.exports = {
 
     var name = fileName.substr(0, to);
     return `${name}.${extension}`;
+  },
+
+  /**
+   * rebase all the html attributes to a specified base path
+   */
+  rebaseAttribute: (html, basePath, attr) => {
+    let $ = cheerio.load(html);
+    let refs = $(`*[${attr}]`)
+      // .toArray()
+      .filter(function(key, val) {
+        // test that the attribute value is indeed a local resource
+        let match = !(/^http:\/\/|^https:\/\/|^#/).test(val.attribs[attr])
+        return match;
+      })
+      .attr(attr, function(){
+        return path.resolve(basePath, this.attribs[attr]);
+      });
+      return $.html();
   }
 };

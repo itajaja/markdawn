@@ -3,6 +3,7 @@
 (function () {
   let fs = require('fs');
   let program = require('commander');
+  let path = require('path');
 
   let markdawn = require('./core');
   let utils = require('./utils');
@@ -45,7 +46,8 @@
     index: program.index,
     format: program.format,
     out: output,
-    theme: program.theme
+    theme: program.theme,
+    contentDir: path.dirname(inputFile)
   };
 
   // call markdawn to generate the pdf

@@ -28,6 +28,7 @@ the `options` object can contain the following properties:
 - `format`: (e.g. "Letter", "A4") overrides the format specified in the theme
 - `out`: name of output file
 - `theme`: name of a preconfigured theme to use (this property has priority over the `index` property)
+- `contentDir`: content directory to take the content source from
 
 ## Creating your theme
 
