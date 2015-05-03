@@ -104,6 +104,7 @@ module.exports = {
       console.warn('the input text is empty');
     }
     let out = opts.out || 'out.pdf';
+    opts.contentDir = opts.contentDir || '';
 
     let index = opts.index;
     if (opts.theme) {
