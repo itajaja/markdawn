@@ -1,14 +1,22 @@
 # markdawn
 
-**markdown for paged documents. Outputs to pdf**
+> markdown for paged documents. Outputs to pdf
 
 [![NPM](https://nodei.co/npm/markdawn.png?downloads=true)](https://nodei.co/npm/markdawn/)
 
 ## Usage
 
+Markdawn generates pdfs from markdown documents and HTML+CSS templates using [remarkable](https://github.com/jonschlinkert/remarkable) markdown generator and [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) pdf generator behind the scenes.
+
 ### As command line tool
 
-you can call markdawn from command line to generate a pdf using the [remarkable](https://github.com/jonschlinkert/remarkable) markdown generator and [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) pdf generator behind the scenes. type `markdawn -h` to show a list of options.
+You can call markdawn from command line. To install:
+
+````bash
+$ npm install -g markdawn
+````
+
+type `markdawn -h` to show a list of options.
 
 ### As library
 
@@ -29,6 +37,10 @@ the `options` object can contain the following properties:
 - `out`: name of output file
 - `theme`: name of a preconfigured theme to use (this property has priority over the `index` property)
 - `contentDir`: content directory to take the content source from
+
+### As grunt task
+
+Visit https://github.com/itajaja/grunt-markdawn/ for more informations
 
 ## Creating your theme
 
