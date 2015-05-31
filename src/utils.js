@@ -34,6 +34,10 @@ module.exports = {
    * rebase all the html attributes to a specified base path
    */
   rebaseAttribute: (html, basePath, attr) => {
+    // make sure it's a valid URI.
+    basePath = basePath[0] === '/'
+      ? 'file://' + basePath
+      : basePath;
     let $ = cheerio.load(html);
     $(`*[${attr}]`)
       .filter(function(key, val) {
@@ -43,7 +47,7 @@ module.exports = {
       })
       .attr(attr, function() {
         // rebase the attribute
-        return 'file://' + path.resolve(basePath, this.attribs[attr]);
+        return path.resolve(basePath, this.attribs[attr]);
       });
     return $.html();
   }
