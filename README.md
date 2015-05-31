@@ -1,4 +1,4 @@
-# markdawn
+# markdawn [![Build Status](https://travis-ci.org/itajaja/markdawn.svg?branch=master)](https://travis-ci.org/itajaja/markdawn)
 
 > markdown for paged documents. Outputs to pdf
 
