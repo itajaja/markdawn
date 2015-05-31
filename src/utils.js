@@ -43,7 +43,7 @@ module.exports = {
         return match;
       })
       .attr(attr, function(){
-        return path.resolve(basePath, this.attribs[attr]);
+        return 'file://' + path.resolve(basePath, this.attribs[attr]);
       });
       return $.html();
   }

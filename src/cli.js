@@ -40,7 +40,6 @@
 
   let output = program.out || utils.changeExtension(inputFile, 'pdf');
 
-
   // build options file
   let opts = {
     index: program.index,

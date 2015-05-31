@@ -77,6 +77,9 @@ function addToc(text, html) {
   return utils.interpolate(html, tocObj);
 }
 
+/**
+ * make the `href` and `src` attributes in an html text point to the provided folder
+ */
 function absolutePaths(html, indexPath) {
   html = utils.rebaseAttribute(html, indexPath, 'href');
   html = utils.rebaseAttribute(html, indexPath, 'src');
@@ -104,7 +107,7 @@ module.exports = {
       console.warn('the input text is empty');
     }
     let out = opts.out || 'out.pdf';
-    opts.contentDir = opts.contentDir || '';
+    opts.contentDir = opts.contentDir || './';
 
     let index = opts.index;
     if (opts.theme) {
@@ -119,6 +122,7 @@ module.exports = {
     }
 
     let indexPath = path.dirname(path.resolve(index));
+    console.log(`path to the index file: ${indexPath}`);
     let html = generateIndex(index);
 
     // process metedata
@@ -139,12 +143,10 @@ module.exports = {
       content: markdown
     });
 
-
-
     let pdfOptions = {};
     try {
       pdfOptions = require(path.resolve(indexPath, 'page.json'));
-    }catch(e) {
+    } catch(e) {
       console.warn(`Warning: missing file page.json in the index folder (${index}). Using default page settings`);
     }
 
