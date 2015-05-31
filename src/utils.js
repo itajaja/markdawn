@@ -35,16 +35,16 @@ module.exports = {
    */
   rebaseAttribute: (html, basePath, attr) => {
     let $ = cheerio.load(html);
-    let refs = $(`*[${attr}]`)
-      // .toArray()
+    $(`*[${attr}]`)
       .filter(function(key, val) {
         // test that the attribute value is indeed a local resource
-        let match = !(/^http:\/\/|^https:\/\/|^#/).test(val.attribs[attr])
+        let match = !(/^http:\/\/|^https:\/\/|^#/).test(val.attribs[attr]);
         return match;
       })
-      .attr(attr, function(){
+      .attr(attr, function() {
+        // rebase the attribute
         return 'file://' + path.resolve(basePath, this.attribs[attr]);
       });
-      return $.html();
+    return $.html();
   }
 };
