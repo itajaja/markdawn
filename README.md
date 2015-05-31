@@ -86,7 +86,7 @@ The generated pdf will show the injected values in the title page. Have a look a
 - [ ] multi column (hardly doable :/)
 - [x] pdf options
 - [x] theme selector
-- [ ] add eslint to gulp
+- [x] add eslint to gulp
 - [ ] @page media type
 - [ ] math functions
 - [ ] fix link and references

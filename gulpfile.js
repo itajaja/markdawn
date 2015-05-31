@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   clean = require('gulp-clean'),
   runSequence = require('run-sequence'),
+  eslint = require('gulp-eslint'),
 
   path = {
     src: {
@@ -24,6 +25,9 @@ gulp.task('clean', function () {
 gulp.task('6to5', function() {
   return gulp.src(path.src.js)
     .pipe(plumber())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError())
     .pipe(babel())
     .pipe(plumber.stop())
     .pipe(gulp.dest(path.dist.js));
