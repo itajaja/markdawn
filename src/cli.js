@@ -16,6 +16,7 @@
     .option('-t, --theme <theme>', 'name of a preconfigured theme to use')
     .option('-i, --index <index.html>', 'path to the index.html file that defines a theme')
     .option('-f, --format <format>', '(e.g. "Letter", "A4") overrides the format specified in the theme')
+    .option('-d, --debug', 'output the intermediate html to "out.html" for debugging purposes')
     .option('--themes', 'shows the list of preconfigured themes')
     .parse(process.argv);
 
@@ -50,8 +51,8 @@
   };
 
   // call markdawn to generate the pdf
-  markdawn.generate(input, opts);
-  // for debugging purposes, you can substitute the line above with
-  // the following line to write an html file
-  // fs.writeFileSync('out.html', markdawn.generate(input, opts));
+  let out = markdawn.generate(input, opts);
+  if (program.debug) {
+    fs.writeFileSync('out.html', out);
+  }
 }());
