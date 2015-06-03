@@ -9,7 +9,7 @@ let config = require('./config');
 let utils = require('./utils');
 
 let md = new Remarkable('full', {
-  linkify: false,
+  linkify: true,
   typographer: true,
   html: true,
   quotes: '“”‘’',
