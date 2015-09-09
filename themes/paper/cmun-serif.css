@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Computer Modern Serif';
+	font-family: 'CMU Serif';
 	src: url('cmunrm.eot');
 	src: url('cmunrm.eot?#iefix') format('embedded-opentype'),
 		 url('cmunrm.woff') format('woff'),
@@ -11,7 +11,7 @@
 
 
 @font-face {
-	font-family: 'Computer Modern Serif';
+	font-family: 'CMU Serif';
 	src: url('cmunbx.eot');
 	src: url('cmunbx.eot?#iefix') format('embedded-opentype'),
 		 url('cmunbx.woff') format('woff'),
@@ -23,7 +23,7 @@
 
 
 @font-face {
-	font-family: 'Computer Modern Serif';
+	font-family: 'CMU Serif';
 	src: url('cmunti.eot');
 	src: url('cmunti.eot?#iefix') format('embedded-opentype'),
 		 url('cmunti.woff') format('woff'),
@@ -35,7 +35,7 @@
 
 
 @font-face {
-	font-family: 'Computer Modern Serif';
+	font-family: 'CMU Serif';
 	src: url('cmunbi.eot');
 	src: url('cmunbi.eot?#iefix') format('embedded-opentype'),
 		 url('cmunbi.woff') format('woff'),
