@@ -8,6 +8,10 @@
 
 Markdawn generates pdfs from markdown documents and HTML+CSS templates using [remarkable](https://github.com/jonschlinkert/remarkable) markdown generator and [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) pdf generator behind the scenes.
 
+## Examples
+
+Head over the (examples)[examples/] folder to see some examples of the built in themes, or check out some templates that I am using at [Hyla Soft](https://github.com/hylasoft-usa/document-templates).
+
 ### As command line tool
 
 You can call markdawn from command line. To install:
