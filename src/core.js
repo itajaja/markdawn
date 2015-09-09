@@ -122,7 +122,6 @@ module.exports = {
     }
 
     let indexPath = path.dirname(path.resolve(index));
-    console.log(`path to the index file: ${indexPath}`);
     let html = generateIndex(index);
 
     // process metedata
