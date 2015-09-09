@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Calibri';
+  font-weight: 400;
+  src: url(fonts/Calibri.ttf);
+}
+
+@font-face {
+  font-family: 'Calibri Light';
+  font-weight: 300;
+  src: url(fonts/CalibriL.ttf);
+}

@@ -169,6 +169,8 @@ module.exports = {
    * @return a list of strings, each string representing a name of a theme
    */
   getThemes: () => {
-    return fs.readdirSync(config.themePath);
+    return fs.readdirSync(config.themePath)
+      // filter out
+      .filter(f => f[0] !== '_');
   }
 };
