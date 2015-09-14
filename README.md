@@ -6,7 +6,7 @@
 
 ## Examples
 
-Head over the (examples)[examples/] folder to see some examples of the built in themes, or check out some templates that I am using at [Hyla Soft](https://github.com/hylasoft-usa/document-templates).
+Head over the [examples](examples/) folder to see some examples of the built in themes, or check out some templates that I am using at [Hyla Soft](https://github.com/hylasoft-usa/document-templates).
 
 ## Usage
 
