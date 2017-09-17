@@ -54,10 +54,6 @@ You can look at the [preconfigured themes](https://github.com/itajaja/markdawn/t
 
 You can also use a preconfigured theme right away! type `markdawn --themes` to see the list of available themes and then use the `-t` option to use one of these themes.
 
-### Headers + Footers
-
-you can define two divs in your `index.html` for the header and the footer. Mark them with the `pageHeader` and `pageFooter` ids respectively and markdawn will put the two divs in the header and footer areas of the document.
-
 ## using metadata
 
 You can declare multi-markdown style metadata at the top of your markdown file. The metadata will be stripped down, and the values will be injected in the generated file. For example, if your markdown file starts like that:
@@ -83,14 +79,13 @@ The generated pdf will show the injected values in the title page. Have a look a
 - [x] a folder that contains all the static elements. (defaults to running folder?)
 - [x] title page
 - [ ] breakpages
-- [x] header + footer
+- [ ] header + footer
 - [x] margins (maybe inside metadata?)
 - [x] metadata (title, author, whatever... multimarkdown style)
 - [ ] themed sections
 - [ ] multi column (hardly doable :/)
 - [x] pdf options
 - [x] theme selector
-- [x] add eslint to gulp
 - [ ] @page media type
 - [ ] math functions
 - [ ] fix link and references

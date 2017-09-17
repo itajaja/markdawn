@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "lib",
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "lib": [
+      "es2015"
+    ]
+  }
+}
