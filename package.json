@@ -1,6 +1,6 @@
 {
   "name": "markdawn",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "(multi)markdown for paged documents. Outputs to pdf",
   "author": "Giacomo Tagliabue <giacomo.tag@gmail.com>",
   "files": [
