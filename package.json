@@ -1,9 +1,11 @@
 {
   "name": "markdawn",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "(multi)markdown for paged documents. Outputs to pdf",
   "author": "Giacomo Tagliabue <giacomo.tag@gmail.com>",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/core",
   "bin": {
     "markdawn": "lib/cli.js"
