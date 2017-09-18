@@ -4,7 +4,7 @@ body {
   text-align: justify;
   color: #333333;
   font-family: 'courier new', courier, monospace;;
-  font-size: 14pt;
+  font-size: 11pt;
   line-height: 1.4;
   word-wrap: break-word;
 }
@@ -18,7 +18,6 @@ body {
 
 #pageHeader,
 #pageFooter {
-  font-size: 14pt;
   margin: 0.3em;
 }
 
@@ -41,7 +40,6 @@ body {
 }
 
 .toc ul {
-  font-size: 14pt;
   list-style-type: none;
   padding-left: 20px;
 }
@@ -248,38 +246,10 @@ body {
 .markdown-body h5,
 .markdown-body h6,
 .toc .toc-title {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  line-height: 1.1;
-  font-family: "Calibri Light";
-  color: rgb(83, 129, 53);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  line-height: 1;
   font-weight: 100;
-}
-
-.toc .toc-title,
-.markdown-body h1 {
-  margin-bottom: 16px;
-  font-size: 18pt;
-}
-
-.markdown-body h2 {
-  font-size: 16pt;
-}
-
-.markdown-body h3 {
-  font-size: 14pt;
-}
-
-.markdown-body h4 {
-  font-size: 13pt;
-}
-
-.markdown-body h5 {
-  font-size: 12pt;
-}
-
-.markdown-body h6 {
-  font-size: 11pt;
 }
 
 .markdown-body blockquote {

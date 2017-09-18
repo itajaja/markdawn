@@ -1,3 +1,12 @@
+Title:Using Markdawn
+Subtitle:An example
+Version:v1.0.0
+Author:Giacomo Tagliabue
+Department:Department of Astrology
+University:MIT
+Address:45 Bar Ave
+Date:11/12/13
+
 # Lorem
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis nibh quis condimentum luctus. Etiam lacus eros, dignissim quis erat sit amet, ultricies convallis eros. Aenean volutpat aliquet nisi, id congue ligula aliquam a. Curabitur feugiat nibh eu condimentum malesuada. Maecenas arcu nulla, [This is a link](http://google.com) lacinia in lectus at, placerat vulputate massa. Donec mollis tortor non quam consectetur, at pharetra tellus pellentesque. Curabitur maximus, massa et finibus pharetra, risus ante placerat ipsum, nec fringilla massa lectus scelerisque lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu felis sit amet felis facilisis condimentum et vel ex. Duis interdum dui at velit auctor, nec aliquet nibh laoreet. Praesent nec tincidunt orci.
@@ -144,11 +153,11 @@ Right aligned columns
 
 # Links
 
-[link text](http://dev.nodeca.com)
+[link text](https://giacomotag.io)
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+[link with title](https://giacomotag.io "title text!")
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Autoconverted link https://giacomotag.io
 
 
 # Images
